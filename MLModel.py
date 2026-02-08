@@ -43,17 +43,21 @@ def predicts(x,y,w,b):
     
 ##################################################################
 
-w,b = gradient_descent(x_train, y_train, 100, 100, 0.1)
-predicted_outputs = predicts(x_train,y_train,w,b)
+# w,b = gradient_descent(x_train, y_train, 100, 100, 0.1)
+# predicted_outputs = predicts(x_train,y_train,w,b)
 
 # plt.plot(x_train,predicted_outputs , c='b') # plotting the prediction line
 # plt.scatter(x_train, y_train, marker='x', c='r')
 
 ###################################################################
 
-x_train_2 = np.array([2.4,2.7,3.3,1.8,3,4])
-y_train_2 = np.array([2.8,2.4,2.2,2.7,3,3.2])
+x_train_2 = np.array([2.4,1.8,3,4])
+y_train_2 = np.array([2.8,2.7,3,3.2])
 
 w_2,b_2 = gradient_descent(x_train_2,y_train_2,100,100,0.1)
 predicted_outputs_2 = predicts(x_train_2,y_train_2,w_2,b_2)
 print(predicted_outputs_2)
+
+plt.plot(x_train_2,predicted_outputs_2 , c='b') # plotting the prediction line
+plt.scatter(x_train_2, y_train_2, marker='x', c='r')
+
